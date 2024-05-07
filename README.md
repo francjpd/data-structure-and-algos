@@ -1,2 +1,2 @@
-## Algorithms - LeetCode
-The purpose from this project is to display the results from the algorithms I've been solving.
+## Algorithms
+The purpose from this project is to serve as a respository of the problems i've been solving.

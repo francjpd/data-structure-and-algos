@@ -1,0 +1,1 @@
+The main idea is to avoid casting the numbers to string. But to iterate over it by dividing by 10 and extracting the digit using modulus 10.
