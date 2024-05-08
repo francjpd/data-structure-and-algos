@@ -47,13 +47,26 @@ const getGcdOptimal = (n1, n2) => {
   }
 }
 
+// Euclidean's algorithm
+
+const getGcdEuclid = (n1, n2) => {
+  let a = n1
+  let b = n2
+  while (a > 0 && b > 0) {
+    if (a > b) a = a % b
+    else b = b % a
+  }
+  if (a === 0) return b
+  return a
+}
+
 describe('getGcd', () => {
   test.each([
     [9, 12, 3],
     [20, 15, 5]
-
   ])('input(%i) - expected: %s', (n1, n2, expected) => {
     expect(getGcd(n1, n2)).toBe(expected)
     expect(getGcdOptimal(n1, n2)).toBe(expected)
+    expect(getGcdEuclid(n1, n2)).toBe(expected)
   })
 })
