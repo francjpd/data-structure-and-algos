@@ -13,7 +13,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "standard"
+      "node_modules/eslint-config-standard/.eslintrc.json"
     ]
   },
   "dependencies": {
