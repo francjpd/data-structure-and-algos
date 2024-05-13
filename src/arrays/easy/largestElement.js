@@ -35,6 +35,6 @@ describe('largestElement', () => {
     [[2, 5, 1, 3, 0], 5],
     [[8, 10, 5, 7, 9], 10]
   ])('should retrieve the largest element', (input, expected) => {
-    expect(largestElement(input, expected)).toBe(expected)
+    expect(largestElement(input)).toBe(expected)
   })
 })

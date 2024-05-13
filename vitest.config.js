@@ -6,7 +6,7 @@ export default defineConfig({
       'src/warm-up/*.js',
       'src/math/*.js',
       'src/sorting/*.js',
-      'src/arrays/*.js'
+      'src/arrays/easy/*.js'
     ]
   }
 })

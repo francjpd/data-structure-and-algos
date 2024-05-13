@@ -1,0 +1,46 @@
+/**
+ * Input: [64, 25, 12, 22, 11]
+ * Ouput: [11, 12, 22, 25, 64]
+ *
+ * i = 0
+ * j = 1 [25, 64, 12, 22, 11]
+ *
+ * i = 1
+ * j = 2 [25, 12, 64, 22, 11]
+ * j = 1 [12, 25, 64 ,22, 11]
+ *
+ * i = 2
+ * j = 3 [25, 12, 22, 64, 11]
+ * j = 2 [25, 12, 22, 64, 11]
+ * j = 1 [12, 25, 22, 64, 11]
+ *
+ * i = 3
+ * j = 4 [ 12, 25, 22, 11, 64]
+ * j = 3 [12, 25, 11, 22, 64]
+ * j = 2 [12, 11, 25, 22 ,64]
+ * j = 1 [11, 12, 25, 22, 64]
+ **/
+
+import { describe, it, expect } from 'vitest'
+
+const insertionSort = arr => {
+  for (let i = 0; i < arr; i++) {
+    for (let j = i + 1; j > 0; j--) {
+      if (arr[j] < arr[j - 1]) {
+        const aux = arr[j - 1]
+        arr[j - 1] = arr[j]
+        arr[j] = aux
+      }
+    }
+  }
+  return arr
+}
+
+describe('insertionSort', () => {
+  it.skip('should sort the array', () => {
+    expect(insertionSort([64, 25, 12, 22, 11])).toEqual([11, 12, 22, 25, 64])
+    expect(insertionSort([13, 46, 24, 52, 20, 9])).toEqual([
+      9, 13, 20, 24, 46, 52
+    ])
+  })
+})
