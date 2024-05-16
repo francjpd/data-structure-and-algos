@@ -2,6 +2,8 @@
  * O(log(N)*n)
  */
 
+import { describe, it, expect } from 'vitest'
+
 const union = (arr1, arr2) => {
   const unionSet = new Set()
   const union = []
@@ -11,8 +13,6 @@ const union = (arr1, arr2) => {
     unionSet.add(arr1[i])
     unionSet.add(arr2[i])
   }
-  //  easy response
-  //  return [...response.values()]
 
   for (const num of unionSet) {
     union.push(num)
@@ -20,4 +20,8 @@ const union = (arr1, arr2) => {
   return union
 }
 
-console.log(union([1, 2, 3, 4, 5], [2, 3, 4, 4, 5]))
+describe('union', () => {
+  it('union', () => {
+    expect(union([1, 2, 3, 4, 5], [2, 3, 4, 4, 5])).toEqual([1, 2, 3, 4, 5])
+  })
+})
