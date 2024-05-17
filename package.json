@@ -18,5 +18,19 @@
   },
   "dependencies": {
     "eslint": "^9.2.0"
+  },
+  "standard": {
+    "globals": [
+      "expect",
+      "it",
+      "describe"
+    ],
+    "plugins": [
+      "html"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "no-undef": "off"
+    }
   }
 }
