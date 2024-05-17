@@ -23,7 +23,8 @@
     "globals": [
       "expect",
       "it",
-      "describe"
+      "describe",
+      "test"
     ],
     "plugins": [
       "html"
