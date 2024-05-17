@@ -7,8 +7,6 @@
 // Output: 4
 // Explanation: The number 7789 has 4 digits.
 
-import { describe, expect, test } from 'vitest'
-
 const countDigitsOptimal = input => Math.floor(Math.log10(input) + 1)
 
 const countDigits = input => input.toString().split('').length

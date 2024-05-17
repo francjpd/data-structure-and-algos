@@ -7,9 +7,7 @@
 // Output: True
 // Explanation: 33+53+13 = 27 + 343 + 1 = 371
 
-import { describe, expect, test } from 'vitest'
-
-const isArmstrong = (n) => {
+const isArmstrong = n => {
   let count = n
   let total = 0
   let totalDigits = 0
@@ -47,7 +45,6 @@ describe('isArmstrong', () => {
     [93084, true],
     [8208, true],
     [9474, true]
-
   ])('input(%i) - expected: %s', (input, expected) => {
     expect(isArmstrong(input)).toBe(expected)
   })

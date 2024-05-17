@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest'
-
 const maximumConsecutive = arr => {
   let max = 0
   let counter = 0

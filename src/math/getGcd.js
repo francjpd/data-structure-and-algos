@@ -16,8 +16,6 @@
 // Factors of 15: 1, 3, 5
 // Common Factors: 1, 5 out of which 5 is the greatest hence it is the GCD
 
-import { describe, expect, test } from 'vitest'
-
 const getGcd = (n1, n2) => {
   const min = Math.min(n1, n2)
   let counter = 1

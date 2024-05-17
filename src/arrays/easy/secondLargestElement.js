@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest'
-
 const minimal = ([largest, secondLargest], arr, index) => {
   if (index >= arr.length - 1) {
     return secondLargest

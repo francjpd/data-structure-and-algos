@@ -6,8 +6,6 @@
 // Explanation:
 //  5 is the largest element in the array.
 
-import { describe, it, expect } from 'vitest'
-
 // Example2:
 // Input:
 //  arr[] = {8,10,5,7,9};

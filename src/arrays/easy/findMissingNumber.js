@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest'
-
 const findMissingNumber = arr => {
   const maximum = (arr.length * (arr.length + 1)) / 2
   let countB = 0

@@ -4,8 +4,6 @@
  *  Ouput: [11, 12, 22, 25, 65]
  */
 
-import { describe, it, expect } from 'vitest'
-
 const selectionSort = arr => {
   for (let i = 0; i < arr.length - 1; i++) {
     let min = i

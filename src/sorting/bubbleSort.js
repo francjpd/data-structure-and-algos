@@ -1,4 +1,3 @@
-import { expect, it, describe } from 'vitest'
 /**
  *  Bubble sort: Find the smallest number and exchange position
  *  Input: [64, 25, 12, 22, 11]

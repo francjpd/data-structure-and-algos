@@ -1,5 +1,3 @@
-import { test, expect, describe } from 'vitest'
-
 // Example 1:
 // Input: X = 5
 // Output: 120

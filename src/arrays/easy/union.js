@@ -2,8 +2,6 @@
  * O(log(N)*n)
  */
 
-import { describe, it, expect } from 'vitest'
-
 const union = (arr1, arr2) => {
   const unionSet = new Set()
   const union = []

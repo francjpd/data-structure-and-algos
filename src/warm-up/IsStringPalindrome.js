@@ -1,4 +1,3 @@
-import { expect, test, describe } from 'vitest'
 // Input: Str =  “ABCDCBA”
 // Output: Palindrome
 // Explanation: String when reversed is the same as string.

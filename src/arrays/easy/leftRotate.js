@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest'
-
 const leftRotate = arr => {
   const first = arr[0]
   for (let i = 0; i < arr.length - 1; i++) {

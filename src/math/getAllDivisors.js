@@ -1,6 +1,4 @@
-import { describe, expect, test } from 'vitest'
-
-const getAllDivisors = (n) => {
+const getAllDivisors = n => {
   let count = 2
   const divisors = [1] // storring factors
   while (count <= n) {
