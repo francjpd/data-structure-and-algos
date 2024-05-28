@@ -11,6 +11,10 @@ const longestSubarraySum = nums => {
   return max
 }
 
+/**
+ * Kadade's algorithm
+ *
+ * */
 const longestSubarraySumOpt = nums => {
   let sum = 0
   let max = Number.NEGATIVE_INFINITY
