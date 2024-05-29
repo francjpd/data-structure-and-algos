@@ -4,7 +4,7 @@ const setMatrixZeroes = matrix => {
   for (let i = 0; i < matrix.length; i++) {
     let row = matrix[i]
     for (let j = 0; j < row.length; j++) {
-      let col = row[j];
+      let col = row[j]
       if (col === 0) {
         columns.add(j)
         rows.add(i)
@@ -25,18 +25,36 @@ const setMatrixZeroes = matrix => {
         }
       }
     }
-
   }
   return matrix
 }
-
-console.log(
-  setMatrixZeroes([
-    [1, 1, 1],
-    [1, 0, 1],
-    [1, 1, 1]
-  ])
-)
-
-
-console.log(setMatrixZeroes([[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]))
+describe('setMatrixZeroes', () => {
+  it.each([
+    [
+      [
+        [1, 1, 1],
+        [1, 0, 1],
+        [1, 1, 1]
+      ],
+      JSON.stringify([
+        [1, 0, 1],
+        [0, 0, 0],
+        [1, 0, 1]
+      ])
+    ],
+    [
+      [
+        [0, 1, 2, 0],
+        [3, 4, 5, 2],
+        [1, 3, 1, 5]
+      ],
+      JSON.stringify([
+        [0, 0, 0, 0],
+        [0, 4, 5, 0],
+        [0, 3, 1, 0]
+      ])
+    ]
+  ])('setMatrixZeroes', (input, expected) => {
+    expect(JSON.stringify(setMatrixZeroes(input))).toEqual(expected)
+  })
+})
