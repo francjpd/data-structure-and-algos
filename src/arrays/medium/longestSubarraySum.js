@@ -35,5 +35,3 @@ describe('longestSubarraySum', () => {
     expect(longestSubarraySumOpt(input)).toBe(expected)
   })
 })
-console.log(longestSubarraySumOpt([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
-console.log(longestSubarraySumOpt([-2, -1, -3, -4, -1, -2, -1, -5, -4]))

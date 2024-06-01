@@ -8,7 +8,7 @@
 // 0101
 // 10101
 
-export const binaryNumberTrianglePattern10 = (num) => {
+export const binaryNumberTrianglePattern10 = num => {
   let toggle = 1
   let result = ''
   for (let i = 0; i < num; i++) {

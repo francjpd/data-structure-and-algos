@@ -28,12 +28,7 @@ const longestSubArray = (arr, k) => {
   }
 }
 
-console.log(
-  longestSubArray(
-    [-13, 0, 6, 15, 16, 2, 15, -12, 17, -16, 0, -3, 19, -3, 2, -9, -6],
-    15
-  )
-)
+
 
 describe('longestSubArray', () => {
   it.skip.each([

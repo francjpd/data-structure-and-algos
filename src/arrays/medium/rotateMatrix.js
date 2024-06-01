@@ -39,14 +39,6 @@ const rotateMatrixOpt = matrix => {
   return matrix
 }
 
-console.log(
-  rotateMatrixOpt([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-  ])
-)
-
 describe('rotateMatrixOpt', () => {
   it.each([
     [
