@@ -7,30 +7,30 @@
 [9, 4, 20, 3, 10, 5], Target Number: 33 Expected Output: 2 (Subarrays: [9, 4, 20] and [4, 20, 3, 6])
 **/
 const countSubarrayTotal = (arr, k) => {
-  let max = 0;
-  let sum = 0;
-  const prefixSum = new Set();
+  let max = 0
+  let sum = 0
+  const prefixSum = new Map()
+  prefixSum.set(0, 1)
   for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-    if (sum === k) {
-      max++;
-    }
+    sum += arr[i]
 
-    let rem = sum - k;
+    let rem = sum - k
     if (prefixSum.has(rem)) {
-      max++;
+      max += prefixSum.get(rem)
     }
 
-    prefixSum.add(sum);
+    prefixSum.set(sum, (prefixSum.get(sum) || 0) + 1)
   }
-  return max;
-};
-describe("countSubarrayTotal", () => {
+  return max
+}
+
+describe('countSubarrayTotal', () => {
   it.each([
     [[1, 1, 1], 2, 2],
     [[1, 2, 3, 4, 5], 5, 2],
     [[10, 2, -2, -20, 10], 10, 3],
-  ])("countSubarrayTotal", (arr, k, expected) => {
-    expect(countSubarrayTotal(arr, k)).toEqual(expected);
-  });
-});
+    [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 55]
+  ])('countSubarrayTotal', (arr, k, expected) => {
+    expect(countSubarrayTotal(arr, k)).toEqual(expected)
+  })
+})
