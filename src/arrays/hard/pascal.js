@@ -33,4 +33,12 @@ const pascal = (numRows) => {
  * The complexity analysis for the space its O(numRows) and the time is O(numRows^2) because we need to iterate for each rows based on the input
  */
 
-console.log(pascal(5));
+describe("pascal", () => {
+  test.each([
+    [1, [[1]]],
+    [2, [[1], [1, 1]]],
+    [5, [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]],
+  ])("pascal", (numRows, expected) => {
+    expect(pascal(numRows)).toEqual(expected);
+  });
+});
