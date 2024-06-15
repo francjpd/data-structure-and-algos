@@ -63,8 +63,44 @@ const mergeSortedArrays = (nums1, nums2) => {
   return result;
 };
 
-// Still left to do the merge sorth algo
+// Still left to do the merge sort algo
 
-console.log(mergeSortedArrays([1, 2, 3, 0, 0, 0], [2, 5, 6]));
-console.log(mergeSortedArrays([1, 4, 8, 10, 0, 0, 0], [2, 3, 9]));
-console.log(mergeSortedArrays([0], [1]));
+const merge = (nums1, nums2) => {
+  if (!nums2.length) {
+    return nums1;
+  }
+  const result = [];
+  let left = 0;
+  let right = 0;
+  let mid = nums1.length - nums2.length;
+  while (left <= mid - 1 && right <= nums2.length - 1) {
+    if (nums1[left] < nums2[right]) {
+      result.push(nums1[left]);
+      left++;
+    } else {
+      result.push(nums2[right]);
+      right++;
+    }
+  }
+  while (left < mid) {
+    result.push(nums1[left]);
+    left++;
+  }
+
+  while (right < nums2.length) {
+    result.push(nums2[right]);
+    right++;
+  }
+
+  for (let i = 0; i < result.length; i++) {
+    nums1[i] = result[i];
+  }
+
+  return nums1;
+};
+
+console.log(merge([1, 2, 3, 0, 0, 0], [2, 5, 6]));
+//console.log(mergeSortedArrays([1, 4, 8, 10, 0, 0, 0], [2, 3, 9]));
+console.log(merge([2, 0], [1]));
+
+console.log(merge([-1, 0, 0, 3, 3, 3, 0, 0, 0], [1, 2, 2]));
