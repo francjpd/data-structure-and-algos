@@ -4,7 +4,7 @@ const maxSubArray = (nums) => {
   let suffix = 1;
   for (let i = 0; i < nums.length; i++) {
     if (prefix === 0) prefix = 1;
-    if (suffix === 0) prefix = 1;
+    if (suffix === 0) suffix = 1;
     suffix = suffix * nums[nums.length - i - 1];
     prefix = prefix * nums[i];
     best = Math.max(best, prefix, suffix);
