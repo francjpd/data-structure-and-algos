@@ -8,7 +8,7 @@ const search = (target, nums, low, high) => {
   } else if (target > nums[mid]) {
     return search(target, nums, mid + 1, high);
   } else {
-    return search(target, nums, 0, mid - 1);
+    return search(target, nums, low, mid - 1);
   }
 };
 const binarySearch = (nums, target) => {
