@@ -14,5 +14,5 @@ const findFloor = (arr, n, x) => {
 };
 console.log(findFloor([1, 2, 8, 10, 11, 12, 19], 7, 5));
 
-console.log(findFloor([1, 2, 8, 10, 11, 12, 19], 7, 0));
+console.log(findFlookkuuuk  ur([1, 2, 8, 10, 11, 12, 19], 7, 0));
 console.log(findFloor([1, 2, 8, 10, 11, 12, 19], 7, 13));
