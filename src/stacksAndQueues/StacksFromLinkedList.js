@@ -2,7 +2,7 @@ const Node = (value, next = null) => {
   const val = value;
   return { val, next };
 };
-const Stack = () => {
+export const Stack = () => {
   let head = Node(null);
   let size = 0;
   return {
@@ -32,7 +32,7 @@ const example = Stack();
 example.push(6);
 example.push(3);
 example.push(2);
-console.log("size", example.size());
-console.log("pop", example.pop());
-console.log("size again", example.size());
-console.log("top", example.top());
+// console.log("size", example.size());
+// console.log("pop", example.pop());
+// console.log("size again", example.size());
+// console.log("top", example.top());
