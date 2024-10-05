@@ -12,12 +12,12 @@ const Stack = () => {
     },
     push(element) {
       queue.push(element);
-      for (let i = 0; i < queue.size() - 1; i++) {
+      for (let i = 0; i < queue.length() - 1; i++) {
         queue.push(queue.pop());
       }
     },
-    size() {
-      return queue.size();
+    length() {
+      return queue.length();
     },
   };
 };
@@ -26,7 +26,7 @@ example.push(3);
 example.push(2);
 example.push(4);
 example.push(1);
-console.log("size", example.size());
+console.log("length", example.length());
 console.log("pop", example.pop());
-console.log("size again", example.size());
+console.log("length again", example.length());
 console.log("top", example.top());

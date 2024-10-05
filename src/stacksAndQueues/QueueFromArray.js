@@ -4,7 +4,7 @@ export const Queue = () => {
     pop() {
       return arr.shift();
     },
-    size() {
+    length() {
       return arr.length;
     },
     top() {
@@ -20,7 +20,7 @@ const example = Queue();
 example.push(6);
 example.push(3);
 example.push(2);
-// console.log("size", example.size());
+// console.log("length", example.length());
 // console.log("pop", example.pop());
-// console.log("size again", example.size());
+// console.log("length again", example.length());
 // console.log("top", example.top());

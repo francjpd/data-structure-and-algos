@@ -4,16 +4,16 @@ const Node = (value, next = null) => {
 };
 export const Stack = () => {
   let head = Node(null);
-  let size = 0;
+  let length = 0;
   return {
     pop() {
       const poppedValue = head.val;
       head = head.next;
-      size--;
+      length--;
       return poppedValue;
     },
-    size() {
-      return size;
+    length() {
+      return length;
     },
     top() {
       return head.val;
@@ -22,7 +22,7 @@ export const Stack = () => {
       const newVal = Node(element);
       newVal.next = head;
       head = newVal;
-      size++;
+      length++;
     },
   };
 };
@@ -32,7 +32,7 @@ const example = Stack();
 example.push(6);
 example.push(3);
 example.push(2);
-// console.log("size", example.size());
+// console.log("length", example.length());
 // console.log("pop", example.pop());
-// console.log("size again", example.size());
+// console.log("length again", example.length());
 // console.log("top", example.top());

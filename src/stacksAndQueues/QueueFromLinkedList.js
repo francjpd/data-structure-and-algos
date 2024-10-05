@@ -6,26 +6,26 @@ const Node = (value, next = null) => {
 const Queue = () => {
   let head = Node(null);
   let last = head;
-  let size = 0;
+  let length = 0;
   return {
     push(x) {
       const node = Node(x);
-      if (size === 0) {
+      if (length === 0) {
         head = node;
         last = node;
       } else {
         last.next = node;
         last = node;
       }
-      size++;
+      length++;
     },
-    size() {
-      return size;
+    length() {
+      return length;
     },
     pop() {
       const valueToRemove = head;
       head = head.next;
-      size--;
+      length--;
       return valueToRemove.val;
     },
     top() {
@@ -38,9 +38,9 @@ const example = Queue();
 example.push(6);
 example.push(3);
 example.push(2);
-console.log("size", example.size());
+console.log("length", example.length());
 console.log("pop", example.pop());
-console.log("size again", example.size());
+console.log("length again", example.length());
 console.log("top", example.top());
 console.log("pop", example.pop());
 console.log("pop", example.pop());

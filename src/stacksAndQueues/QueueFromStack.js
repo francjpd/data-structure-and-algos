@@ -3,8 +3,8 @@ const QueueOpt = () => {
   let input = Stack();
   let output = Stack();
   const transferIfNeeded = () => {
-    if (output.size() === 0) {
-      while (input.size() !== 0) {
+    if (output.length() === 0) {
+      while (input.length() !== 0) {
         output.push(input.pop());
       }
     }
@@ -21,9 +21,9 @@ const QueueOpt = () => {
       transferIfNeeded();
       return output.top();
     },
-    size() {
+    length() {
       transferIfNeeded();
-      return output.size();
+      return output.length();
     },
   };
 };
@@ -34,11 +34,11 @@ const Queue = () => {
   return {
     push(x) {
       const aux = Stack();
-      while (stack.size() !== 0) {
+      while (stack.length() !== 0) {
         aux.push(stack.pop());
       }
       stack.push(x);
-      while (aux.size() !== 0) {
+      while (aux.length() !== 0) {
         stack.push(aux.pop());
       }
     },
@@ -48,8 +48,8 @@ const Queue = () => {
     pop() {
       return stack.pop();
     },
-    size() {
-      return stack.size();
+    length() {
+      return stack.length();
     },
   };
 };
@@ -59,7 +59,7 @@ example.push(3);
 example.push(2);
 example.push(4);
 example.push(1);
-console.log("size", example.size());
+console.log("length", example.length());
 console.log("pop", example.pop());
-console.log("size again", example.size());
+console.log("length again", example.length());
 console.log("top", example.top());
