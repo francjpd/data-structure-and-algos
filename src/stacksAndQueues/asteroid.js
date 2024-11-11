@@ -31,12 +31,10 @@ const asteroidCollisions = (asteroids) => {
       if (Math.abs(asteroid) === asteroidsMonoStack.at(-1)) {
         asteroidsMonoStack.pop();
         isAsteroidDestroyed = true;
+      } else if (Math.abs(asteroid) > asteroidsMonoStack.at(-1)) {
+        asteroidsMonoStack.pop();
       } else {
-        if (Math.abs(asteroid) > asteroidsMonoStack.at(-1)) {
-          asteroidsMonoStack.pop();
-        } else {
-          isAsteroidDestroyed = true;
-        }
+        isAsteroidDestroyed = true;
       }
     }
     if (!isAsteroidDestroyed) asteroidsMonoStack.push(asteroid);
