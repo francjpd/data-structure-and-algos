@@ -1,8 +1,8 @@
-## Algorithms
+# Algorithms
 
 The purpose from this project is to serve as a respository of the problems i've been solving.
 
-The project only uses two libraries:
+The project only uses two librariies:
 
 - Standard lint
 - Vitest to include unit test for each problem I encounter. So you can actually implement the test within the problem and its cleaner. ie
