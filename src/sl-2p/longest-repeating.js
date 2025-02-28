@@ -1,24 +1,26 @@
 const longRepeating = (s, k) => {
-  let nchar = 0;
-  let cchar = s[0];
-  let left = 0;
-  let maxL = 0;
-
-  for (let right = 1; right < s.length; right++) {
-    if (s[right] != cchar) nchar++;
-    if (nchar > k) {
-      while (s[left + 1] == cchar) {
-        left++;
-      }
-      cchar = s[left + 1];
-      nchar = k === 0 ? 0 : 1;
-      right = left + 1;
-    }
-
-    const currentLength = right - left + 1;
-    maxL = Math.max(currentLength, maxL);
-  }
-  return maxL;
+	return slidingWindow(s, k) - slidingWindow(s, k - 1);
+};
+const slidingWindow = (s, k) => {
+	if (k < 0) return 0;
+	let l = 0;
+	let currentChar = s[0];
+	let current = 1;
+	let longest = 0;
+	let maxChars = 0;
+	for (let r = 1; r < s.length; r++) {
+		if (currentChar !== s[r]) {
+			maxChars++;
+		}
+		current++;
+		while (maxChars > k && s[l] != current) {
+			currentChar = s[l];
+			maxChars = 0;
+			current--;
+		}
+		longest += r - l + 1;
+	}
+	return longest;
 };
 //
 // console.log(longRepeating("ABBA", 2));
