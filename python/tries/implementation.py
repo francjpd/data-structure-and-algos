@@ -8,7 +8,6 @@ class Trie:
     def __init__(self):
         return self.root = TrieNode()
 
-
     def insert(self, word: str) -> None:
         node = self.root
         for letter in word:
@@ -17,7 +16,6 @@ class Trie:
             node = node.children[letter]
         node.endOfWord = True
 
-
     def search(self, word: str) -> bool:
         node = self.root
         for letter in word:
@@ -25,7 +23,6 @@ class Trie:
                 return False
             node = node.children[letter]
         return  node.endOfWord
-
 
     def startsWith(self, prefix: str) -> bool:
         node = self.root
