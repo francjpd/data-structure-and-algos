@@ -1,6 +1,6 @@
-const UP = [1, 0];
+const UP = [-1, 0];
 const RIGHT = [0, 1];
-const DOWN = [-1, 0];
+const DOWN = [1, 0];
 const LEFT = [0, -1];
 const ROTTEN = 2;
 const FRESH = 1;
